@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  db-local:
+    image: postgres:12-alpine
+    container_name: regiscweb-db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=regiscweb
+    volumes:
+      - ./data-regiscweb:/var/lib/postgresql/data
+    # restart: always
