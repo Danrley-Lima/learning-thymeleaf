@@ -27,6 +27,12 @@ public class Professor {
   @Enumerated(EnumType.STRING)
   private StatusProfessor statusProfessor;
 
+  public Professor(String nome, BigDecimal salario, StatusProfessor statusProfessor) {
+    this.nome = nome;
+    this.salario = salario;
+    this.statusProfessor = statusProfessor;
+  }
+
   public Professor() {
 
   }
@@ -62,4 +68,14 @@ public class Professor {
   public void setStatusProfessor(StatusProfessor statusProfessor) {
     this.statusProfessor = statusProfessor;
   }
+
+  
+
+  @Override
+  public String toString() {
+    return "Professor [id=" + id + ", nome=" + nome + ", salario=" + salario + ", statusProfessor=" + statusProfessor
+        + "]";
+  }
+
+  
 }
